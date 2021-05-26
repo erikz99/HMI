@@ -1,0 +1,159 @@
+h2 {
+    font-size: 1.2em;
+}
+
+ul li {
+    margin-top: 1rem;
+}
+
+.banner-row {
+    margin-top: 60px;
+}
+
+.banner-header{
+    height: 10%;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.banner-title {
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.banner {
+    box-sizing: border-box;
+    border: 3px solid black;
+}
+
+.banner-info {
+    box-sizing: border-box;
+    height: 50%;
+    margin: 10px 10px 0 10px;
+    padding: 5px;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+
+.banner-info::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+.banner-info::-webkit-scrollbar-thumb {
+    background: rgb(65, 65, 65);
+    border-radius: 40px;
+}
+
+.banner-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+.order-btn{
+    height: 32px;
+    align-self: center;
+}
+
+.left-banner {
+    margin-right: 40px;
+    padding: 10px 60px 10px 10px;
+    border-left: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.right-banner {
+    margin-left: 40px;
+    padding: 10px 10px 10px 60px;
+    border-right: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+#delivery_img {
+    object-fit: contain;
+}
+
+#func_container_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 322px;
+}
+
+#func_container {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 125px 1fr;
+}
+
+#func_container p {
+    margin: 0;
+}
+
+#left_func_container {
+    width: 100%;
+    height: 220px;
+    background: rgb(88, 170, 162);
+    border-right: none;
+    border-left: none;
+}
+
+#right_func_container {
+    width: 100%;
+    height: 220px;
+    background: rgb(221, 199, 45);
+    border-right: none;
+    border-left: none;
+}
+
+#logo_container {
+    width: 20%;
+}
+
+#buy_banner {
+    background: rgb(156, 236, 91);
+}
+
+#deliver_banner {
+    /*background: rgb(255 232 72);*/
+    background: rgb(114, 214, 95);
+}
+
+#perks_banner {
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid black;
+}
+
+.icon-center-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.perk-title {
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 2px solid black;
+}
+
+.perks_sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+
+.perk-container {
+    background: rgb(229, 230, 231);
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 40px;
+    margin: 10px 20px;
+    padding: 10px;
+}

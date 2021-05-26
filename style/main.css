@@ -1,11 +1,44 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
-    background: whitesmoke;
+    /*background: whitesmoke; background: rgb(164, 203, 240);*/
+    background: rgb(232, 240, 242);
+    
 }
 main {
-    position: relative;
     top: 64px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+    background: rgb(229, 230, 231);
+    border-top: 6px solid rgb(36, 130, 50);
+    /*border-top: 6px solid rgb(0, 53, 102);*/
+}
+
+.no-style-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cnetered-text {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(65, 65, 65);
+    border-radius: 40px;
 }
 
 .header-item {
@@ -29,29 +62,15 @@ main {
 
 }
 
-.main-container{
-    /*delete next line*/
-    height: 450px;
-
-
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 5% 10% 5% 10%;
-    width: 80%;
-    background: rgb(249, 250, 249);
-    border: 2px solid rgb(56, 102, 65);
-    border-radius: 12px;
-}
-
 .gradient-btn {
     font-weight: bold;
     box-sizing: border-box;
     color: white;
+    font-size: 0.9rem;
     padding: 0 10px;
     background: rgb(0,42,82);
     background: linear-gradient(90deg, rgba(0,42,82,1) 25%, rgb(110, 228, 14) 100%);
-    border: 2px solid rgb(73, 153, 35);
+    border: 2px solid rgb(43, 43, 43);
     border-radius: 3px;
 }
 
@@ -65,12 +84,6 @@ form hr {
     border: 1px solid rgb(65, 123, 90);
 }
 
-.gradient-btn:hover {
-    background: rgb(18,68,116);
-    background: linear-gradient(90deg, rgba(18,68,116,1) 20%, rgba(14,191,145,1) 50%, rgba(137,255,42,1) 100%);
-    border-color: rgb(49, 49, 49);
-}
-
 form input, label {
     display: flex;
     flex-direction: column;
@@ -78,6 +91,12 @@ form input, label {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.gradient-btn:hover {
+    background: rgb(18,68,116);
+    background: linear-gradient(90deg, rgba(18,68,116,1) 20%, rgba(14,191,145,1) 50%, rgba(137,255,42,1) 100%);
+    border-color: rgb(14, 14, 14);
 }
 
 #page-header {
@@ -109,6 +128,12 @@ form input, label {
     #sign_in, #register {
         display: none;
     }
+}
+
+.footer-title {
+    font-size: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
 }
 
 /*

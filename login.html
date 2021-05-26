@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/login.css">
+        <script src="scripts/profile.js"></script>
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="index.html">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил" onclick="profileRedirect('login')">
+            </div>
+        </header>
+        <main>
+            <div class="form-container">
+                <form action="" method="post" class="form" id="login_form">
+                    <header id="form_title">Вход</header>
+                    <hr>
+                    <div class="form-item">
+                        <label for="email" class="lbl">Имейл:</label>
+                        <input type="email" id="email" name="email" placeholder="Въведи имейл тук">
+                        <small class="error_field" id="error_email">Полето е задължително</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="password" class="lbl">Парола:</label>
+                        <input type="password" id="password" name="password" placeholder="Въведи парола тук">
+                        <small class="error_field" id="error_password">Полето е задължително</small>
+                    </div>
+                    <div class="form-item btn-container">
+                        <button id="login-btn" class="btn_submit gradient-btn" type="button" onclick="login()">Вход</button>
+                        <a href="register.html">Нямаш профил? Натисни тук, за да се регистрираш.</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

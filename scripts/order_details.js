@@ -1,6 +1,73 @@
-import { DB } from './modules/db.js';
+const DB = {
+    "10056": {
+        "date": "22.05.2021",
+        "status": "Завършена",
+        "address" : "бул. Св. Климент Охридски 10, София",
+        "type" : "Купи вместо мен",
+        "supplier" : {
+            firstName : "Николай",
+            secondName: "Георгиев",
+        },
+        "market" : "Фантастико", 
+        "products" : [
+            {
+                name : "Кока кола",
+                quantity : "2L"
+            }, 
+            {
+                name : "Олио Бисер",
+                quantity : "1L"
+            },
+            {
+                name : "Банани",
+                quantity : "2 kg"
+            }
+        ], 
+        "rating" : 0
+    },
+    "10055": {
+        "date": "22.03.2021",
+        "status": "Завършена",
+        "address" : "51 блок, Студентски град, София",
+        "type" : "Купи вместо мен",
+        "supplier" : {
+            firstName : "Антон",
+            secondName: "Бахов",
+        },
+        "market" : "Лидл", 
+        "products" : [
+            {
+                name : "Уиски Jameson ",
+                quantity : "1L"
+            }, 
+            {
+                name : "Чипс Lays със сол",
+                quantity : "215g"
+            },
+            {
+                name : "Минерална вода Банкя",
+                quantity : "10L"
+            }
+        ],
+        "rating" : 0
+    },
+    "10054": {
+        "date": "10.06.2021",
+        "status": "Завършена",
+        "address" : "жк, ulitsa \"Академик Борис Стефанов\" №2, 1083, Студентски град, София",
+        "shippingAddress" : "ул. Професор Витали Таджер, блок 8, Студентски град, София",
+        "type" : "Вземи и достави",
+        "supplier" : {
+            firstName : "Икбал",
+            secondName: "Расимов",
+        },
+        "market" : "Еконт", 
+        "details" : "Трябва да се получи книгата \"Богат татко, беден татко\" на името на Анатаолий Йорданов.",
+        "rating" : 0
+    }
+};
 
-function write(order) {
+function write(order, id) {
     var idElement = document.getElementById("id");
     idElement.value = id;
     
@@ -29,14 +96,14 @@ function write(order) {
     var addressElement = document.getElementById("address");
     addressElement.value = order.address;
     
-    var ratingElement = document.getElementsByClassName("stars_container")[0];
+    var ratingElement = document.getElementById("stars_container");
     var numberOfStars = 5;
     var rating = localStorage.getItem(`${id}`);
     if (rating == 0) {
         for (var i=0; i<numberOfStars; i++) {
             var starElement = document.createElement("img");
             starElement.setAttribute("id", `star_${i+1}`);
-            starElement.setAttribute("src", "../img/icons/star_0.png");
+            starElement.setAttribute("src", "img/icons/star_empty_icon.png");
             starElement.addEventListener('click', rate);
             ratingElement.appendChild(starElement);
         }
@@ -102,14 +169,11 @@ function write(order) {
 }
 
 function initRating(rating) {
-    var deliveryElement = document.getElementById("delivery_data"); 
-    var ratingElement = document.createElement("div");
-    ratingElement.setAttribute("class", "stars_container");
-    deliveryElement.appendChild(ratingElement);
+    var ratingElement = document.getElementById("stars_container");
 
     for (var i=0; i<rating; i++) {
         var starElement = document.createElement("img");
-        starElement.setAttribute("src", "../img/icons/star_1.png");
+        starElement.setAttribute("src", "img/icons/star_full_icon.png");
         ratingElement.appendChild(starElement);
     }
 }
@@ -120,20 +184,27 @@ function rate(event) {
     localStorage.setItem(`${id}`, starsId);
     var numberOfStars = 5;
 
-    var ratingElement = document.getElementsByClassName("stars_container")[0];
-    ratingElement.parentNode.removeChild(ratingElement);
+    var ratingElement = document.getElementById("stars_container");
+    var ratingElementParent = ratingElement.parentNode;
+    ratingElementParent.removeChild(ratingElement);
+    ratingElement = document.createElement("div");
+    ratingElement.setAttribute("id", "stars_container");
+    ratingElementParent.appendChild(ratingElement);
 
     initRating(starsId);
 }
 
 var id = localStorage.getItem("order");
-if (localStorage.getItem("setRatings")==null) {
-    var keys = Object.keys(DB);
-    for (var keyId of keys) {
-        localStorage.setItem(`${keyId}`, 0);
+
+(function() {
+    
+    if (localStorage.getItem("setRatings")==null) {
+        var keys = Object.keys(DB);
+        for (var keyId of keys) {
+            localStorage.setItem(`${keyId}`, 0);
+        }
+        localStorage.setItem("setRatings", "true");
     }
-    console.log("Run");
-    localStorage.setItem("setRatings", "true");
-}
-var order = DB[`${id}`];
-write(order);
+    var order = DB[`${id}`];
+    write(order, id);
+})();

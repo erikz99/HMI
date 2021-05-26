@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="bg">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="txt/javascript" src="scripts/main.js"></script>
-        <script src="scripts/edit.js" defer></script>
         <link rel="stylesheet" href="style/include.css">
+        <script src="scripts/profile.js"></script>
     </head>
     <body>
         <header id="page-header">
             <div class="header-item" id="icon_header_container">
-                <a href="">
+                <a href="index.html">
                     <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
                 </a>
             </div>
             <div class="header-item" id="profile_header_container">
-                <a id="sign_in" class="header-a" href="">Вход</a>
-                <a id="register"  class="header-a" href="">Регистрация</a>
-                <a href="">
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <a href="profile.html">
                     <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
                 </a>
             </div>
@@ -38,6 +38,7 @@
                     <header class="profile_header">
                         <h1>Информация за профила</h1>
                         <button class="gradient-btn" id="btn_edit">Редактирай</button>
+                        <button class="gradient-btn" id="btn_logout" onclick="logout()">Изод</button>
                     </header>
                     <hr>
                     <form class="profile-menu-item" id="profile_ocerview">
@@ -70,7 +71,7 @@
                                 <label for="address">Адрес:</label>
                                 <input class="full-width" type="text" name="address" id="address" disabled>
                             </div>
-                            <div class="grid-container-3-cols one-row" id="overview_card" disabled>
+                            <div class="grid-container-3-cols one-row" id="overview_card">
                                 <div class="field two-col one-row-small-screen">
                                     <label for="card_number">Номер на карта:</label>
                                     <input type="text" name="card_number" id="card_number" disabled>

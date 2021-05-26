@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js"></script>
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/no_profile.css">
+        <script src="scripts/profile.js"></script>
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="index.html">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил" onclick="profileRedirect('no_profile')">
+            </div>
+        </header>
+        <main>
+            <section id="banner_section">
+                <header class="image-header">
+                    <img src="img/banners/person_computer_small.png" alt="">
+                    <h1>Не сте влезли в профила си</h1>
+                </header>
+
+                <p>
+                    Може да продължите като гост като натиснете <a href="">ТУК</a>, но ще пропуснете да 
+                    се възползвате от някои удобни функционалности на профила в TrustMe, като:
+                </p>
+                <ul>
+                    <li>Запазване на данни за повторно използване при следващи поръчки</li>
+                    <li>Преглеждане на история на поръчките, включваща минали и текущи поръчки</li>
+                    <li>Повторно изпълняване на поръчка</li>
+                    <li>Оценяване на нашите доставчици, чрез което подпомагате нашата и Вашата работа със системата</li>
+                </ul>
+            </section>
+            <footer>
+                <section class="footer-section">
+                    <header>
+                        <h2 class="footer-title">Условия за ползване</h2>
+                    </header>
+                    <ul class="no-style-list">
+                        <li>Правила</li>
+                        <li>Доставка и връщане</li>
+                        <li>Решаване на диспути</li>
+                    </ul>
+                </section>
+                <section class="footer-section">  
+                    <header>
+                        <h2 class="footer-title">Контакти</h2>
+                    </header>
+                    <p>Обслужване клиенти: 088 880 8080</p>
+                    <p>Работно време: всеки ден от 07:30 до 22:30</p>
+                    <p>Последвайте ни:</p>
+                    <div id="social_media_wrapper">
+                        <img src="img/icons/fb_logo.png" alt="">
+                        <img src="img/icons/ig_logo.png" alt="">
+                        <img src="img/icons/tw_logo.png" alt="">
+                    </div>
+                </section>
+            </footer>
+        </main>
+    </body>
+</html>

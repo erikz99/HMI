@@ -1,87 +1,193 @@
 <!DOCTYPE html>
 <html lang="bg">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="txt/javascript" src="scripts/main.js" defer></script>
-        <link rel="stylesheet" href="style/include.css">
-        <script src="scripts/order_history.js" defer></script>
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="style/main.css">
+        <script src="scripts/profile.js"></script>
     </head>
     <body>
         <header id="page-header">
             <div class="header-item" id="icon_header_container">
-                <a href="">
+                <a href="index.html">
                     <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
                 </a>
             </div>
             <div class="header-item" id="profile_header_container">
-                <a id="sign_in" class="header-a" href="">Вход</a>
-                <a id="register"  class="header-a" href="">Регистрация</a>
-                <a href="">
-                    <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
-                </a>
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил" onclick="profileRedirect('index')">
             </div>
         </header>
-        <main id="profile">
-            <nav class="profile-menu">
-                <header class="inner-header">
-                    <p>Меню на профил</p>
-                </header>
-                <div class="profile-menu-item" id="profile_info">
-                    <a href="profile.html">Информация за профила</a>
+        <main id="index_page">
+            <div id="banners">
+                <div id="func_container_wrapper">
+                    <img id="delivery_img" src="img/banners/delivery_top_header.png" alt="Получаване на пратка">
+                    
                 </div>
-                <div class="profile-menu-item" id="orders">
-                    <a href="order_history.html">История на поръчките</a>
-                </div>
-            </nav>
-            <div class="profile-page-wrapper">
-                <div class="profile-page">
-                    <header class="profile_header">
-                        <h1>Информация за профила</h1>
-                    </header>
-                    <hr>
-                    <div class="table-wrapper">
-                        <table class="profile-menu-item" id="history_table">  
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Дата</th>
-                                    <th>Вид поръчка</th>
-                                    <th>Адрес на взимане</th>
-                                    <th>Сума</th>
-                                    <th>Статус</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="history-row clickable">
-                                    <td class="id">10056</td>
-                                    <td>22.05.2021</td>
-                                    <td>“Купи вместо мен“</td>
-                                    <td>Фантастико<br>бул. Св. Климент Охридски 10, София</td>
-                                    <td>32.56 лв.</td>
-                                    <td>Завършена</td>
-                                </tr>
-                                <tr class="history-row clickable">
-                                    <td class="id">10055</td>
-                                    <td>19.05.2021</td>
-                                    <td>“Купи вместо мен“</td>
-                                    <td>Фантастико<br>бул. Св. Климент Охридски 10, София</td>
-                                    <td>60.94 лв.</td>
-                                    <td>Завършена</td>
-                                </tr>
-                                <tr class="history-row clickable">
-                                    <td class="id">10054</td>
-                                    <td>22.05.2021</td>
-                                    <td>“Вземи и достави“</td>
-                                    <td>Еконт<br>жк, ulitsa "Академик Борис Стефанов", София</td>
-                                    <td>63.56 лв.</td>
-                                    <td>Завършена</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <section id="func_container" class="banner-row">
+                    <section id="left_func_container"  class="banner">
+                        <header class="banner-header">
+                            <h1 class="banner-title">
+                                "Купи вместо мен"
+                            </h1>
+                        </header>
+                        <section class="banner-info">
+                            <p>
+                                Нашите доставчици ще напазаруват от любимия Ви магазин, сергия или супермаркет вместо Вас, като доставят
+                                желаните продукти където и да сте в града.
+                            </p>
+                        </section>
+                        <div class="banner-btn-wrapper">
+                            <button class="order-btn gradient-btn">Създай поръчка</button>
+                        </div>
+                    </section>
+                    <div id="logo_container">
+                        <img src="img/banners/func_banner_logo.png" alt="">
                     </div>
-                </div>
+                    <section id="right_func_container" class="banner">
+                        <header class="banner-header">
+                            <h1 class="banner-title">
+                                "Вземи и достави"
+                            </h1>
+                        </header>
+                        <section class="banner-info">
+                            <p>
+                                Транспортни услуги за пратки от където и до където пожелаете в рамките на един единствен 
+                                работен ден.
+                            </p>
+                        </section>
+                        <div class="banner-btn-wrapper ">
+                            <button class="order-btn gradient-btn">Създай поръчка</button>
+                        </div>
+                    </section>
+                </section>
+                <section id="buy_banner" class="banner-row left-banner banner">
+                    <header>
+                        <h1 class="banner-title">
+                            Създаване на поръчка "Купи вместо мен"
+                        </h1>
+                    </header>
+                    <p>
+                        Имате списък за пазаруване, но не и времето да го изпълните? "Купи вместо мен" е удобно, бързо
+                        и лесно решение на проблема Ви. Нашите доставчици ще закупят желаните от Вас продукти от всеки
+                        магазин във вашия град и ще ги доставят където и да сте. Трябва само да въведете адрес на 
+                        магазина, адресът, на който желаете да получите покупките и да въведете списъка с продукти.
+                    </p>
+                    <p>
+                        В списъка с продукти за всеки отделен продукт трябва да въведете име, количество и начин на 
+                        пакетиране, който ще определи какво означава цифрата в полето за количеството, т.е. дали 
+                        е бройка или насипно количество.
+                    </p>
+                </section>
+                <section id="deliver_banner" class="banner-row right-banner banner">
+                    <header>
+                        <h1 class="banner-title">
+                            Създаване на поръчка "Вземи и достави"
+                        </h1>
+                    </header>
+                    <p>
+                        В момента най-бързата услуга за градски доставки завършва доставка чак на следващия ден. TrustMe 
+                        предлага алтернатива, която гарантира доставка в същия работен ден, в който е саздадена поръчката. 
+                        Край на пътуването из града за взимане или оставяне на пратки.
+                    </p>
+                    <p>
+                        За да се възползвате от услугата трябва само да въведете адрес на получаване и адрес на доставяне на 
+                        пратката, както и допърнителна информация, която доставчика е добре да има. Тя може да уточнява някой 
+                        от двата адреса, от кого се очаква доставчика да получи пратката, дали изисква внимание при привоза 
+                        или каквито и да е други подробности, които биха подпомогнали Вас и нашите доставчици. Но не се 
+                        притеснявайте, ако има проблем нашите доставчици ще се свържат с Вас, за да изяснят детайлите.
+                    </p>
+                </section>
+                <section id="perks_banner" class="banner-row">
+                    <header>
+                        <h1 class="banner-title">
+                            Защо да изберете TrustMe?
+                        </h1>
+                    </header>
+                    <div class="perks_sections">
+                        <section class="perk-container">
+                            <header>
+                                <div class="icon-center-wrapper">
+                                    <img src="img/icons/truck_icon.png" alt="">
+                                </div>
+                                <h2 class="cnetered-text perk-title">Бърза и сигурна доставка</h2>
+                            </header>
+                            <p>
+                                Доставка в същия работен ден на създаване на поръчката. Също така може да се 
+                                възползвате от опцията “отложена доставка“, чрез която задавате по-късен час за 
+                                изпълнение на поръчката. А ако имате нужда от помощ с преместването или друг вид 
+                                транспорт на големи предмети, може да използвате опцията за "тежкотоварни" доставки.
+                            </p>
+                            <p>
+                                TrustMe гарантира решаването на диспути между доставчик и клиент, създали се при 
+                                изпълнение на поръчките.
+                            </p>
+                        </section>
+                        <section class="perk-container">
+                            <header>
+                                <div class="icon-center-wrapper">
+                                    <img src="img/icons/earth_icon.png" alt="">
+                                </div>
+                                <h2 class="cnetered-text perk-title">По-чиста природа</h2>
+                            </header>
+                            <p>
+                                Изолзвайки TustMe, Вие помагате за намаляването на трафика в града си и съответно 
+                                за подобряване на качеството на въздуха. 
+                            </p>
+                            <p>
+                                Освен това нашите доставчици използват 
+                                хартиени торбички за пакетиране на пратките, с което намаляваме масовото ненужно 
+                                закопуване на найлонови торби за многократна употреба, които не се използват.
+                            </p>
+                        </section>
+                        <section class="perk-container">
+                            <header>
+                                <div class="icon-center-wrapper">
+                                    <img src="img/icons/shop_icon.png" alt="">
+                                </div>
+                                <h2 class="cnetered-text perk-title">Доставка от/до всеки адрес</h2>
+                            </header>
+                            <p>
+                                Вече няма нужда да се правите дълги отбивки от пътя си, за да напазарувате от любимите 
+                                си магазини.
+                            </p>
+                            <p>
+                                TrustMe няма ограничение върху селекцията от магазини, от които може да правите
+                                поръчки. Така предоставяме възможност на бизнесите, които нямат онлайн платформа 
+                                за физическите си магазини, да имат онлайн клиенти. Нека заедно подпомогнем местните 
+                                малки и средни бизнеси.
+                            </p>
+                        </section>
+                    </div>
+                </section>
             </div>
+            <footer>
+                <section class="footer-section">
+                    <header>
+                        <h2 class="footer-title">Условия за ползване</h2>
+                    </header>
+                    <ul class="no-style-list">
+                        <li>Правила</li>
+                        <li>Доставка и връщане</li>
+                        <li>Решаване на диспути</li>
+                    </ul>
+                </section>
+                <section class="footer-section">  
+                    <header>
+                        <h2 class="footer-title">Контакти</h2>
+                    </header>
+                    <p>Обслужване клиенти: 088 880 8080</p>
+                    <p>Работно време: всеки ден от 07:30 до 22:30</p>
+                    <p>Последвайте ни:</p>
+                    <div id="social_media_wrapper">
+                        <img src="img/icons/fb_logo.png" alt="">
+                        <img src="img/icons/ig_logo.png" alt="">
+                        <img src="img/icons/tw_logo.png" alt="">
+                    </div>
+                </section>
+            </footer>
         </main>
     </body>
 </html>

@@ -1,3 +1,17 @@
 input {
     background: rgb(189, 233, 152);;
 }
+
+#rate_container {
+    display: flex;
+}
+
+#stars_container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+#stars_container img {
+    padding-left: 5px;
+}
