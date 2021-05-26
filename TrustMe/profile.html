@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js"></script>
+        <script src="scripts/edit.js" defer></script>
+        <link rel="stylesheet" href="style/include.css">
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="">Вход</a>
+                <a id="register"  class="header-a" href="">Регистрация</a>
+                <a href="">
+                    <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
+                </a>
+            </div>
+        </header>
+        <main id="profile">
+            <nav class="profile-menu">
+                <header class="inner-header">
+                    <p>Меню на профил</p>
+                </header>
+                <div class="profile-menu-item" id="profile_info">
+                    <a href="profile.html">Информация за профила</a>
+                </div>
+                <div class="profile-menu-item" id="orders">
+                    <a href="order_history.html">История на поръчките</a>
+                </div>
+            </nav>
+            <div class="profile-page-wrapper">
+                <div class="profile-page">
+                    <header class="profile_header">
+                        <h1>Информация за профила</h1>
+                        <button class="gradient-btn" id="btn_edit">Редактирай</button>
+                    </header>
+                    <hr>
+                    <form class="profile-menu-item" id="profile_ocerview">
+                        <header class="inner-header">
+                            <p>Обща информация</p>
+                        </header>
+                        <div class="grid-container profile-section" id="overview_main">
+                            <div class="field one-row-small-screen">
+                                <label for="first_name">Име:</label>
+                                <input type="text" name="first_name" id="first_name" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="last_name">Фамилия:</label>
+                                <input type="text" name="last_name" id="last_name" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="email">Имейл:</label>
+                                <input type="email" name="email" id="email" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="phone">Телефонен номер:</label>
+                                <input type="text" name="phone" id="phone" disabled>
+                            </div>
+                        </div>
+                        <header class="inner-header">
+                            <p>Запазени данни</p>
+                        </header>
+                        <div class="grid-container profile-section" id="overview_saved_data">
+                            <div class="field one-row">
+                                <label for="address">Адрес:</label>
+                                <input class="full-width" type="text" name="address" id="address" disabled>
+                            </div>
+                            <div class="grid-container-3-cols one-row" id="overview_card" disabled>
+                                <div class="field two-col one-row-small-screen">
+                                    <label for="card_number">Номер на карта:</label>
+                                    <input type="text" name="card_number" id="card_number" disabled>
+                                </div>
+                                <div class="field one-row-small-screen">
+                                    <label for="card_date">Валидна до:</label>
+                                    <input type="text" name="card_date" id="card_date" disabled>
+                                </div>
+                                <div class="field one-row-3-cols one-row-small-screen">
+                                    <label for="card_owner">Име на собственик:</label>
+                                    <input class="full-width" type="text" name="card_owner" id="card_owner" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

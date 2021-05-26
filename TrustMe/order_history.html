@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js" defer></script>
+        <link rel="stylesheet" href="style/include.css">
+        <script src="scripts/order_history.js" defer></script>
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="">Вход</a>
+                <a id="register"  class="header-a" href="">Регистрация</a>
+                <a href="">
+                    <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
+                </a>
+            </div>
+        </header>
+        <main id="profile">
+            <nav class="profile-menu">
+                <header class="inner-header">
+                    <p>Меню на профил</p>
+                </header>
+                <div class="profile-menu-item" id="profile_info">
+                    <a href="profile.html">Информация за профила</a>
+                </div>
+                <div class="profile-menu-item" id="orders">
+                    <a href="order_history.html">История на поръчките</a>
+                </div>
+            </nav>
+            <div class="profile-page-wrapper">
+                <div class="profile-page">
+                    <header class="profile_header">
+                        <h1>Информация за профила</h1>
+                    </header>
+                    <hr>
+                    <div class="table-wrapper">
+                        <table class="profile-menu-item" id="history_table">  
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Дата</th>
+                                    <th>Вид поръчка</th>
+                                    <th>Адрес на взимане</th>
+                                    <th>Сума</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="history-row clickable">
+                                    <td class="id">10056</td>
+                                    <td>22.05.2021</td>
+                                    <td>“Купи вместо мен“</td>
+                                    <td>Фантастико<br>бул. Св. Климент Охридски 10, София</td>
+                                    <td>32.56 лв.</td>
+                                    <td>Завършена</td>
+                                </tr>
+                                <tr class="history-row clickable">
+                                    <td class="id">10055</td>
+                                    <td>19.05.2021</td>
+                                    <td>“Купи вместо мен“</td>
+                                    <td>Фантастико<br>бул. Св. Климент Охридски 10, София</td>
+                                    <td>60.94 лв.</td>
+                                    <td>Завършена</td>
+                                </tr>
+                                <tr class="history-row clickable">
+                                    <td class="id">10054</td>
+                                    <td>22.05.2021</td>
+                                    <td>“Вземи и достави“</td>
+                                    <td>Еконт<br>жк, ulitsa "Академик Борис Стефанов", София</td>
+                                    <td>63.56 лв.</td>
+                                    <td>Завършена</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: whitesmoke;
+}
+main {
+    position: relative;
+    top: 64px;
+}
+
+.header-item {
+    position: relative;
+    padding-top: 12px;
+}
+
+.header-a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.header-a:hover {
+    color: rgb(156, 236, 91);
+}
+
+.icon {
+    object-fit: none;
+
+}
+
+.main-container{
+    /*delete next line*/
+    height: 450px;
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10% 5% 10%;
+    width: 80%;
+    background: rgb(249, 250, 249);
+    border: 2px solid rgb(56, 102, 65);
+    border-radius: 12px;
+}
+
+.gradient-btn {
+    font-weight: bold;
+    box-sizing: border-box;
+    color: white;
+    padding: 0 10px;
+    background: rgb(0,42,82);
+    background: linear-gradient(90deg, rgba(0,42,82,1) 25%, rgb(110, 228, 14) 100%);
+    border: 2px solid rgb(73, 153, 35);
+    border-radius: 3px;
+}
+
+form header {
+    margin-top: 10px;
+    text-align: center;
+}
+
+form hr {
+    width: 40%;
+    border: 1px solid rgb(65, 123, 90);
+}
+
+.gradient-btn:hover {
+    background: rgb(18,68,116);
+    background: linear-gradient(90deg, rgba(18,68,116,1) 20%, rgba(14,191,145,1) 50%, rgba(137,255,42,1) 100%);
+    border-color: rgb(49, 49, 49);
+}
+
+form input, label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#page-header {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 53, 102);
+    /*background: goldenrod;*/
+    border-bottom: 6px solid rgb(36, 130, 50);
+    z-index: 100;
+}
+
+#icon_header_container {
+    margin-left: 2%;
+}
+
+#profile_header_container {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+}
+
+@media (max-width: 380px) {
+    #sign_in, #register {
+        display: none;
+    }
+}
+
+/*
+$prussian-blue: rgb(0, 53, 102);
+$oxford-blue: rgb(0, 18, 51);
+$amazon: rgb(65, 123, 90);
+$turquoise-green: rgb(187, 225, 195);
+$inchworm: rgb(156, 236, 91);
+*/

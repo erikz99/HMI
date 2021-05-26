@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js"></script>
+        <link rel="stylesheet" href="style/main.css">
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="">Вход</a>
+                <a id="register"  class="header-a" href="">Регистрация</a>
+                <a href="">
+                    <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="main-container">
+                <form action="#" method="post" class="form" id="login_form">
+                    <header id="form_title">Вход</header>
+                    <hr>
+                    <label for="email" class="lbl">Имейл:</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+            
+                    <label for="password" class="lbl">Парола:</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+        
+                    <button class="btn_submit" type="button" onclick="checkLogin()">Вход</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
