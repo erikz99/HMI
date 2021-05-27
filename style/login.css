@@ -83,3 +83,11 @@ main {
     width: 128px;
     margin-bottom: 20px;
 }
+
+#checkbox_row label, #checkbox_row input{
+    display: inline;
+}
+
+#checkbox_row input{
+    width: 24px;
+}

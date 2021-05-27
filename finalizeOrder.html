@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js"></script>
+        <script src="scripts/edit.js" defer></script>
+        <script src="scripts/profile.js"></script>
+        <link rel="stylesheet" href="style/include.css">
+        <link rel="stylesheet" href="style/takeAndDeliver.css">
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="index.html">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил" onclick="profileRedirect('finalizeOrder')">
+            </div>
+        </header>
+        <main id="finalizeOrder">
+            <div class="take-and-deliver-page-wrapper">
+                <div class="take-and-deliver-page">
+                    <header class="take-and-deliver_header">
+                        <h1>Финализиране на поръчка</h1>
+                        <button class="gradient-btn" id="btn_edit">Редактирай</button>
+                    </header>
+                    <hr>
+                    <form class="take-and-deliver-menu-item" id="take-and-deliver_overview">
+                        <header class="inner-header">
+                            <p>Информация за пратката</p>
+                        </header>
+                        <div class="grid-container take-and-deliver-section" id="overview_main">
+                            <div class="field one-row-small-screen">
+                                <label for="take_address">Адрес за взимане на пратка:</label>
+                                <input type="text" name="take_address" id="take_address" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="delivery_address">Адрес за доставка:</label>
+                                <input type="text" name="delivery_address" id="delivery_address" disabled>
+                            </div>
+                            <div class="field one-row">
+                                <label for="shipment_info">Информация за пратката:</label>
+                                <input class="input-wide" name="shipment_info" id="shipment_info" disabled>
+                            </div>
+                        </div>
+						<header class="inner-header">
+                            <p>Вид доставка:</p>
+                        </header>
+						<div class="grid-container take-and-deliver-section" id="overview_saved_data">
+                            <div class="field one-row">
+                                <input type="radio" class="radioButton" id="standartDelivery" checked="checked" name="deliveryType" value="standartDelivery" disabled>
+							    <label for="standartDelivery" class="radioB">Стандартна доставка</label>
+                            </div>
+							<div class="field one-row">
+                                <input type="radio" class="radioButton" id="expressDelivery" name="deliveryType" value="expressDelivery" disabled>
+                                <label for="expressDelivery" class="radioB">Експресна доставка</label>
+                            </div>
+                            <div class="field one-row">
+                                <input type="radio" class="radioButton" id="heavyDelivery" name="deliveryType" value="heavyDelivery" disabled>
+                                <label for="heavyDelivery" class="radioB">Тежкотоварна доставка</label>
+                            </div>
+                        </div>
+                        <header class="inner-header">
+                            <p>Информация за доставката</p>
+                        </header>
+                        <div class="grid-container take-and-deliver-section" id="overview_saved_data">
+                            <div class="field one-row-small-screen">
+                                <label for="supplier">Доставчик:</label>
+                                <input type="text" name="supplier" id="supplier" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="rating">Оценка:</label>
+                                <input name="rating" id="rating" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="delivery_price">Цена на доставка:</label>
+                                <input type="text" name="delivery_price" id="delivery_price" disabled>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -15,3 +15,7 @@ input {
 #stars_container img {
     padding-left: 5px;
 }
+
+.table-wrapper {
+    grid-column: 1 / span 2;
+}

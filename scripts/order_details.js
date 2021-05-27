@@ -147,7 +147,7 @@ function write(order, id) {
         var detailed_data = document.getElementById("detailed_data");
 
         var divElementShippingAddr = document.createElement("div");
-        divElementShippingAddr.setAttribute("class","field one-row-small-screen")
+        divElementShippingAddr.setAttribute("class","field one-row")
         divElementShippingAddr.innerHTML = 
         `   
             <label for="address">Адрес за доставка:</label>
@@ -157,7 +157,7 @@ function write(order, id) {
         document.getElementById("shipping-address").value = order.shippingAddress;
 
         var divElementDetails = document.createElement("div");
-        divElementDetails.setAttribute("class","field one-row-small-screen");
+        divElementDetails.setAttribute("class","field one-row");
         divElementDetails.innerHTML = 
         `   
             <label for="address">Детайли:</label>

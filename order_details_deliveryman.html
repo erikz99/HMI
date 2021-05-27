@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style/include.css">
         <script src="scripts/profile.js"></script>
-        <script src="scripts/order_details.js" defer></script>
     </head>
     <body>
         <header id="page-header">
@@ -17,7 +16,7 @@
             <div class="header-item" id="profile_header_container">
                 <a id="sign_in" class="header-a" href="login.html">Вход</a>
                 <a id="register"  class="header-a" href="register.html">Регистрация</a>
-                <a href="profile.html">
+                <a href="profile_deliveryman.html">
                     <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
                 </a>
             </div>
@@ -28,10 +27,10 @@
                     <p>Меню на профил</p>
                 </header>
                 <div class="profile-menu-item" id="profile_info">
-                    <a href="profile.html">Информация за профила</a>
+                    <a href="profile_deliveryman.html">Информация за профила</a>
                 </div>
                 <div class="profile-menu-item" id="orders">
-                    <a href="order_history.html">История на поръчките</a>
+                    <a href="order_history_deliveryman.html">История на поръчките</a>
                 </div>
             </nav>
             <div class="profile-page-wrapper">
@@ -50,7 +49,12 @@
                             </div>
                             <div class="field one-row-small-screen">
                                 <label for="status">Статус:</label>
-                                <input type="text" name="status" id="status" disabled>
+                                <select name="status" id="status">
+                                    <option value="waiting">Изчакваща</option>
+                                    <option value="received">Приета</option>
+                                    <option value="rejected">Отказана</option>
+                                    <option value="finished">Завършена</option>
+                                </select>
                             </div>
                             <div class="field one-row-small-screen">
                                 <label for="date">Дата на създаване:</label>
@@ -77,7 +81,7 @@
                                 <div id="rate_container" class="one-row one-row-small-screen">
                                     <p>Оценка:</p>
                                     <div id="stars_container">
-
+                                    
                                     </div>
                                 </div>
                                 <small>Моля дайте и Вашата оценка</small>
@@ -87,14 +91,6 @@
                             <p>Детайли за поръчка:</p>
                         </header>
                         <div class="grid-container profile-section" id="detailed_data">
-                            <div class="field one-row-small-screen">
-                                <label for="market">Обект:</label>
-                                <input type="text" name="market" id="market" disabled>
-                            </div>
-                            <div class="field one-row-small-screen">
-                                <label for="address">Адрес:</label>
-                                <input type="text" name="address" id="address" disabled>
-                            </div>
                         </div>
                     </form>
                 </div>

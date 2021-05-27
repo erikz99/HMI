@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="txt/javascript" src="scripts/main.js"></script>
+        <script src="scripts/addInfForUnregisteredUser.js" defer></script>
+        <link rel="stylesheet" href="style/include.css">
+        <link rel="stylesheet" href="style/takeAndDeliver.css">
+    </head>
+    <body>
+        <header id="page-header">
+            <div class="header-item" id="icon_header_container">
+                <a href="index.html">
+                    <img class="icon" id="logo_img" src="img/icons/logo_hands.png" alt="Лого на TustMe">
+                </a>
+            </div>
+            <div class="header-item" id="profile_header_container">
+                <a id="sign_in" class="header-a" href="login.html">Вход</a>
+                <a id="register"  class="header-a" href="register.html">Регистрация</a>
+                <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил" onclick="profileRedirect('index')">
+            </div>
+        </header>
+        <main id="add-info">
+            <div class="take-and-deliver-page-wrapper">
+                <div class="take-and-deliver-page">
+                    <header class="take-and-deliver_header">
+                        <h1>Вземи и достави</h1>
+                    </header>
+                    <hr>
+                    <form class="take-and-deliver-menu-item" id="profile_ocerview">
+                        <header class="inner-header">
+                            <p>Информация за поръчителя</p>
+                        </header>
+                        <div class="grid-container take-and-deliver-section" id="overview_main">
+                            <div class="field one-row-small-screen">
+                                <label for="first_name">Име:</label>
+                                <input type="text" name="first_name" id="first_name">
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="last_name">Фамилия:</label>
+                                <input type="text" name="last_name" id="last_name">
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="email">Имейл:</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="phone">Телефонен номер:</label>
+                                <input type="text" name="phone" id="phone">
+                            </div>
+                        </div>
+						<div>
+							<button class="gradient-btn" type="button" id="btn_next">Продължи</button>
+						</div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -12,8 +12,10 @@ window.login = function() {
             document.getElementById('error_email').style.display = 'block';
             document.getElementById('error_email').textContent = "Невалиден имейл или парола";
         } else {
+            let isDeliveryMan = profiles[email.value]["isDeliveryMan"];
             localStorage.setItem("logged", "1");
             localStorage.setItem("currentEmail", email.value);
+            localStorage.setItem("isDeliveryMan", isDeliveryMan);
             window.location.href = window.location.href.replace("login", "index");
         }
     }
@@ -35,6 +37,7 @@ window.register = function() {
     var address = document.getElementById("city");
     var address = document.getElementById("address");
     var email = document.getElementById("email");
+    var isDeliveryMan = document.getElementById("is_delivery_man");
     let profiles = JSON.parse(localStorage.getItem("profiles"));
     var emptyCounter = 0;
 
@@ -105,13 +108,19 @@ window.register = function() {
             email.classList.remove("error");
             document.getElementById('error_email').style.display = 'none';
             if (emptyCounter === 0) {
+                if (isDeliveryMan.checked) {
+                    isDeliveryMan = "1";
+                } else {
+                    isDeliveryMan = "0";
+                }
                 profiles[email.value] = {
                     "password": password.value,
                     "firstName": firstName.value,
                     "lastName": lastName.value,
                     "phone": phone.value,
                     "city": city.value,
-                    "address": address.value
+                    "address": address.value,
+                    "isDeliveryMan": isDeliveryMan
                 }
                 localStorage.setItem("profiles", JSON.stringify(profiles));
                 window.location.href = window.location.href.replace("register", "index");
@@ -130,9 +139,12 @@ function validateField(field, error_msg){
 }
 
 function profileRedirect(page) {
-    console.log(localStorage.getItem("logged"));
     if (localStorage.getItem("logged") != 0) {
-        window.location.href = window.location.href.replace(page, "profile");
+        if(localStorage.getItem("isDeliveryMan") == 1) {
+            window.location.href = window.location.href.replace(page, "profile_deliveryman");
+        } else {
+            window.location.href = window.location.href.replace(page, "profile");
+        }
     } else {
        window.location.href = window.location.href.replace(page, "no_profile");
     }
@@ -141,4 +153,5 @@ function profileRedirect(page) {
 function logout() {
     localStorage.setItem("logged", "0");
     localStorage.setItem("currentEmail", "");
+    window.location.href = window.location.href.replace("profile_deliveryman", "login").replace("profile", "login");
 }

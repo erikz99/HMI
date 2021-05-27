@@ -36,6 +36,11 @@ footer {
     background: transparent;
 }
 
+div {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(65, 65, 65);
+}
+
 ::-webkit-scrollbar-thumb {
     background: rgb(65, 65, 65);
     border-radius: 40px;
@@ -67,7 +72,7 @@ footer {
     box-sizing: border-box;
     color: white;
     font-size: 0.9rem;
-    padding: 0 10px;
+    padding: 5px 10px;
     background: rgb(0,42,82);
     background: linear-gradient(90deg, rgba(0,42,82,1) 25%, rgb(110, 228, 14) 100%);
     border: 2px solid rgb(43, 43, 43);

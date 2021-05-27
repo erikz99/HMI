@@ -32,7 +32,7 @@ ul li {
     margin: 10px 10px 0 10px;
     padding: 5px;
     border: 2px solid black;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .banner-info::-webkit-scrollbar {
@@ -53,6 +53,7 @@ ul li {
 .order-btn{
     height: 32px;
     align-self: center;
+    margin-top: 10px;
 }
 
 .left-banner {

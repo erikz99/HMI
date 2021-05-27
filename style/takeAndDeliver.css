@@ -1,0 +1,167 @@
+main {
+    position: relative;
+    display: flex;
+}
+
+header p {
+    text-align: left;
+}
+
+hr {
+    margin-bottom: 40px;
+}
+
+form input, form label {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 ;
+}
+
+form input {
+    padding: 5px;
+    background: rgb(245, 245, 245);
+}
+
+form label {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.field {
+    padding: 0 10px 15px 10px;
+}
+
+.take-and-deliver-menu-item a {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid grey;
+}
+
+body {
+    background: rgb(211, 229, 234);
+}
+
+.take-and-deliver-menu-item a {
+    display: block;
+}
+
+.take-and-deliver-menu-item a:hover {
+    /*border-color: rgb(49, 49, 49);*/
+    border-bottom: 2px solid;
+    border-color: rgb(0, 117, 25);
+    color: rgb(89, 150, 40);
+}
+
+.take-and-deliver_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+.inner-header {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.take-and-deliver-page {
+    position: relative;
+    padding: 10px 5% 10px 5%;
+    border-radius: 18px;
+    background: rgb(229, 230, 235);
+    border: 2px solid rgb(84, 122, 52)
+}
+
+.take-and-deliver-page-wrapper {
+    position: relative;
+    margin: 30px 0 30px 10%;
+    width: 75%;
+    padding: 18px;
+    background:rgb(0, 42, 82);
+    border-radius: 40px;
+    border: 2px solid rgb(95, 95, 95)
+}
+
+.take-and-deliver-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.one-row, .two-col {
+    grid-column: 1 / span 2;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#overview_saved_data {
+    margin-bottom: 30px;
+}
+
+#btn_edit {
+    height: 32px;
+    align-self: center;
+}
+
+@media (max-width:700px) {
+    .take-and-deliver-page-wrapper {
+        margin: 64px 10% 30px 10%;
+        padding: 20px;
+        border-radius: 40px;
+    }
+    nav .inner-header {
+        display: none;
+    }
+}
+
+@media (max-width:583px) {
+    .take-and-deliver-page-wrapper {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    .profile_header {
+        flex-direction: column;
+    }
+
+    .one-row-small-screen {
+        grid-column: 1 / span 3;
+    }
+    
+    .take-and-deliver-menu-item a {
+        border-bottom: none;
+    }
+}
+
+.input-wide {
+	height: 200px;
+}
+
+input.radioButton {width: auto;}
+
+.radioTest input, label {
+	display:inline;
+}
+
+.radioButton, .radioB {
+    display: inline;
+}
+
+#btn_next {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style/include.css">
         <script src="scripts/profile.js"></script>
-        <script src="scripts/order_details.js" defer></script>
     </head>
     <body>
         <header id="page-header">
@@ -17,7 +16,7 @@
             <div class="header-item" id="profile_header_container">
                 <a id="sign_in" class="header-a" href="login.html">Вход</a>
                 <a id="register"  class="header-a" href="register.html">Регистрация</a>
-                <a href="profile.html">
+                <a href="profile_deliveryman.html">
                     <img class="icon" id="profile_img" src="img/icons/account.png" alt="Икона на потребителски профил">
                 </a>
             </div>
@@ -28,43 +27,24 @@
                     <p>Меню на профил</p>
                 </header>
                 <div class="profile-menu-item" id="profile_info">
-                    <a href="profile.html">Информация за профила</a>
+                    <a href="profile_deliveryman.html">Информация за профила</a>
                 </div>
                 <div class="profile-menu-item" id="orders">
-                    <a href="order_history.html">История на поръчките</a>
+                    <a href="order_history_deliveryman.html">История на поръчките</a>
                 </div>
             </nav>
             <div class="profile-page-wrapper">
                 <div class="profile-page">
                     <header class="profile_header">
-                        <h1>Информация за поръчка</h1>
+                        <h1>Информация за профила</h1>
+                        <button class="gradient-btn" id="btn_edit">Редактирай</button>
                     </header>
+                    <hr>
                     <form class="profile-menu-item" id="profile_ocerview">
                         <header class="inner-header">
                             <p>Обща информация</p>
                         </header>
                         <div class="grid-container profile-section" id="overview_main">
-                            <div class="field one-row-small-screen">
-                                <label for="id">Идентификационен номер:</label>
-                                <input type="text" name="id" id="id" disabled>
-                            </div>
-                            <div class="field one-row-small-screen">
-                                <label for="status">Статус:</label>
-                                <input type="text" name="status" id="status" disabled>
-                            </div>
-                            <div class="field one-row-small-screen">
-                                <label for="date">Дата на създаване:</label>
-                                <input type="text" name="date" id="date" disabled>
-                            </div>
-                            <div class="field one-row-small-screen">
-                                <label for="type">Вид на поръчката:</label>
-                                <input type="text" name="type" id="type" disabled>
-                            </div>
-                        </div>
-                        <header class="inner-header">
-                            <p>Информация за доставчик</p>
-                        </header>
-                        <div class="grid-container profile-section" id="delivery_data">
                             <div class="field one-row-small-screen">
                                 <label for="first_name">Име:</label>
                                 <input type="text" name="first_name" id="first_name" disabled>
@@ -73,29 +53,25 @@
                                 <label for="last_name">Фамилия:</label>
                                 <input type="text" name="last_name" id="last_name" disabled>
                             </div>
-                            <div class="field">
-                                <div id="rate_container" class="one-row one-row-small-screen">
-                                    <p>Оценка:</p>
-                                    <div id="stars_container">
-
-                                    </div>
-                                </div>
-                                <small>Моля дайте и Вашата оценка</small>
+                            <div class="field one-row-small-screen">
+                                <label for="email">Имейл:</label>
+                                <input type="email" name="email" id="email" disabled>
+                            </div>
+                            <div class="field one-row-small-screen">
+                                <label for="phone">Телефонен номер:</label>
+                                <input type="text" name="phone" id="phone" disabled>
                             </div>
                         </div>
                         <header class="inner-header">
-                            <p>Детайли за поръчка:</p>
+                            <p>Запазени данни</p>
                         </header>
-                        <div class="grid-container profile-section" id="detailed_data">
-                            <div class="field one-row-small-screen">
-                                <label for="market">Обект:</label>
-                                <input type="text" name="market" id="market" disabled>
-                            </div>
-                            <div class="field one-row-small-screen">
+                        <div class="grid-container profile-section" id="overview_saved_data">
+                            <div class="field one-row">
                                 <label for="address">Адрес:</label>
-                                <input type="text" name="address" id="address" disabled>
+                                <input class="full-width" type="text" name="address" id="address" disabled>
                             </div>
                         </div>
+                        <button class="gradient-btn" type="button" id="btn_logout" onclick="logout()">Изход</button>
                     </form>
                 </div>
             </div>
